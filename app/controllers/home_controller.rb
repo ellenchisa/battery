@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
     def index 
-        
     end 
 
     def oauth
@@ -14,7 +13,7 @@ class HomeController < ApplicationController
 
         session[:fbuser] = fb_user
 
-        redirect_to root_url
+        redirect_to new_battery_url
     end
 
     def logout
