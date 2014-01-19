@@ -5,6 +5,9 @@ Energy::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get 'oauth' => 'home#oauth'
+  get 'logout' => 'home#logout'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

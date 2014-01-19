@@ -1,1 +1,4 @@
-Hello!
+Hello <%= session[:fbuser]['first_name'] %>!
+
+<h2><%= link_to "Want to make your own battery?", Koala::Facebook::OAuth.new.url_for_oauth_code(:callback => oauth_url) %></h2>
+
