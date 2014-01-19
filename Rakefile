@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Battery::Application.load_tasks
+Energy::Application.load_tasks
