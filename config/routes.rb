@@ -8,7 +8,12 @@ Energy::Application.routes.draw do
   get 'oauth' => 'home#oauth'
   get 'logout' => 'home#logout'
 
-resources :batteries
+  get 'new' => 'batteries#new'
+  post 'battery' => 'batteries#create'
+  get 'battery' => 'batteries#show'
+
+  get 'battery/edit' => 'batteries#edit'
+  patch 'battery' => 'batteries#update'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

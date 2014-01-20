@@ -20,6 +20,12 @@ class BatteriesController < ApplicationController
         end
     end
 
+    def show
+        @user = User.find_by_facebookid(session[:fbuser]['id'])
+        @battery = @user.battery
+    end
+
+
     private 
         def battery_params
             params.require(:battery).permit(:level)
