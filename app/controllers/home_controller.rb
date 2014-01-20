@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
         session[:fbuser] = fb_user
 
-        redirect_to new_battery_url
+        redirect_to new_url
     end
 
     def logout

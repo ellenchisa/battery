@@ -1,4 +1,4 @@
-<%= form_for(@battery) do |f| %>
+<%= form_tag(battery_url) do %>
   <% if @battery.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@battery.errors.count, "error") %> prohibited this document from being saved:</h2>
@@ -24,8 +24,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :level, 'How are you feeling?' %>
-    <%= f.text_field :level %>
+    <%= label :battery, :level, 'How are you feeling?' %>
+    <%= text_field :battery, :level %>
 
 <button type="submit" class="btn btn-success"> Submit </button>
 

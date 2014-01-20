@@ -1,4 +1,9 @@
 class BatteriesController < ApplicationController
+
+    before_filter :is_logged_in
+    before_filter :has_battery, :except => ['show']
+    before_filter :no_battery, :only => ['show']
+
     def index
     end
 
@@ -14,7 +19,7 @@ class BatteriesController < ApplicationController
         @battery.user = @user
         
         if @battery.save
-            redirect_to batteries_url    
+            redirect_to battery_url    
         else
             render action: "new"
         end
