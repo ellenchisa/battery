@@ -16,8 +16,9 @@
 <li> Use it as a gentle reminder - or as a signal to others for when would be a good time to reach out. </li>
 </ol>
 
-<h2><%= link_to "Get Started", Koala::Facebook::OAuth.new.url_for_oauth_code(:callback => oauth_url) %></h2>
+<%= button_to "Get Started", Koala::Facebook::OAuth.new.url_for_oauth_code(:callback => oauth_url)%>
 
-<p> Batteries courtesy of PixelsDaily (and modified by me). Originals are <a href="http://pixelsdaily.com/resources/photoshop/psds/flat-battery-icon-pack/">here.</a></p>
-
+<div id="footer">
+<p> Battery images courtesy of PixelsDaily (and modified by me). Originals are available <a href="http://pixelsdaily.com/resources/photoshop/psds/flat-battery-icon-pack/">here.</a></p>
+</div>
 </div>

@@ -10,10 +10,25 @@
         width: 750px;
 }
 
-a:link {
-color: #7D1717;
+
+.button {
+    background-color: #7D1717;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    border-top-right-radius:20px;   
+    border-bottom-right-radius:20px;
+    width: 200px;
+    padding-bottom: 10px;
+    color: white;
 }
 
-a:visited{
-color:#7D1717;
+.button a:link {
+    color: white;
+}
+
+
+
+#footer {
+    font-size: 10px;
+    padding-top: 20px;
 }
