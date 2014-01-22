@@ -1,3 +1,11 @@
 COW
 
-<%= @battery.level %>
+<% if @battery.level == 1 %>
+<%= image_tag('../../assets/0battery.png') %>
+<% elsif @battery.level == 2 %>
+<%= image_tag('../../assets/12battery.png') %>
+<% elsif @battery.level == 3 %>
+<%= image_tag('../../assets/34battery.png') %>
+<% else %>
+  <%= image_tag('../../assets/fullbattery.png') %>
+<% end %>
