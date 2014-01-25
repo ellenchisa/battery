@@ -15,6 +15,8 @@ Energy::Application.routes.draw do
   get 'battery/edit' => 'batteries#edit'
   patch 'battery' => 'batteries#update'
 
+  post 'sms' => 'sms#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
