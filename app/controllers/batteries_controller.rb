@@ -28,6 +28,9 @@ class BatteriesController < ApplicationController
     def show
         @user = User.find_by_facebookid(session[:fbuser]['id'])
         @battery = @user.battery
+
+        puts @user.id
+        puts @battery.id
     end
 
 

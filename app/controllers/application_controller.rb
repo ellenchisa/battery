@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     end
 
     def has_battery
-        puts User.find_by_facebookid(session[:fbuser]['id']).name
         redirect_to battery_url if User.find_by_facebookid(session[:fbuser]['id']) != nil
     end
 
