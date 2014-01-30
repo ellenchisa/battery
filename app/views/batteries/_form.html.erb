@@ -1,3 +1,5 @@
+<div id="container">
+
 <%= form_tag(battery_url) do %>
   <% if @battery.errors.any? %>
     <div id="error_explanation">
@@ -30,3 +32,4 @@
 <button type="submit" class="btn btn-success"> Submit </button>
 
 <% end %>
+</div>
