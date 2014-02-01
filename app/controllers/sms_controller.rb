@@ -12,16 +12,17 @@ protect_from_forgery :except => [:index]
         user = User.find_by_phone(from_number)
 
         if user
+            battery = Battery.new
             if message_body == 'better'
-                user.battery.level += 1
+                battery.level = user.battery.level + 1
             elsif message_body == 'worse'
-                user.battery.level -= 1
+                battery.level = user.battery.level - 1
             elsif message_body == 'same'
-                user.battery.level = user.battery.level
+                battery.level = user.battery.level
             end
-            user.battery.save
+            user.batteries << battery
+            user.save!
         end
-
 
         render :text => 'okay!'
     end
