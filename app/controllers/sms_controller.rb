@@ -25,7 +25,8 @@ protect_from_forgery :except => [:index]
             end
         end
 
-        render :text => 'okay!'
+        response = Twilio::TwiML::Response.new
+        render :text => response.text
         
     end
 
