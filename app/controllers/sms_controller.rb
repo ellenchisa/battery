@@ -4,8 +4,13 @@ protect_from_forgery :except => [:index]
 
     def index
 
-        if params["AccountSid"] == Twilio::SID
+        uri = 'http://quiet-falls-7953.herokuapp.com/sms'
+        signature = request.headers['HTTP_X_TWILIO_SIGNATURE']
 
+        validator = Twilio::Util::RequestValidator.new(Twilio::TOKEN)
+        twilio_params = params.reject {|k| k.downcase == k}
+
+        if validator.validate uri, twilio_params, signature
             message_body = params["Body"].downcase
             from_number = params["From"].downcase
 
