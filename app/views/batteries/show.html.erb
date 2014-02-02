@@ -4,13 +4,13 @@
 <p> Welcome to your battery! </p>
 
 <% if @battery.level == 1 %>
-<%= image_tag('../../assets/0battery.png') %>
+<%= image_tag('0battery.png') %>
 <% elsif @battery.level == 2 %>
-<%= image_tag('../../assets/12battery.png') %>
+<%= image_tag('12battery.png') %>
 <% elsif @battery.level == 3 %>
-<%= image_tag('../../assets/34battery.png') %>
+<%= image_tag('34battery.png') %>
 <% else %>
-  <%= image_tag('../../assets/fullbattery.png') %>
+  <%= image_tag('fullbattery.png') %>
 <% end %>
 
 <br><br>

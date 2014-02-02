@@ -5,7 +5,8 @@ gem 'rails', '4.0.2'
 
 
 group :production do
-        gem 'pg'
+    gem 'pg'
+    gem 'rails_12factor'
 end
 
 group :development, :test do
