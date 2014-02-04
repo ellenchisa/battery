@@ -1,3 +1,4 @@
+<LINK href="battery.css.scss" rel="stylesheet" type="text/css">
 <div id="container">
 
 <%= form_tag(battery_url) do %>
@@ -24,6 +25,20 @@
   <%= label :user, :notification_hour, 'What time do you want us to ask you?' %>
   <%= text_field :user, :notification_hour, class:'form-control' %>
   </div> -->
+
+  <div class="dropdown">
+    <button class="btn dropdown-toggle.btn-success" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Dropdown
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+  </div>
+
 
   <div class="form-group">
     <%= label :battery, :level, 'How are you feeling?' %>
