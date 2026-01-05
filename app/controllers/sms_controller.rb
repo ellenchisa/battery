@@ -1,10 +1,12 @@
 class SmsController < ApplicationController
 
+# CSRF protection is disabled for this action because Twilio webhooks cannot include CSRF tokens
+# Security is ensured through Twilio's request signature validation below
 protect_from_forgery :except => [:index]
 
     def index
 
-        uri = 'http://quiet-falls-7953.herokuapp.com/sms'
+        uri = ENV['TWILIO_WEBHOOK_URL'] || request.url
         signature = request.headers['HTTP_X_TWILIO_SIGNATURE']
 
         validator = Twilio::Util::RequestValidator.new(Twilio::TOKEN)

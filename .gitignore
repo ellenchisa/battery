@@ -15,6 +15,20 @@
 /log/*.log
 /tmp
 
+# Ignore sensitive configuration files
 config/facebook.yml
-
 config/twilio.yml
+
+# Ignore environment variables and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Ignore editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
